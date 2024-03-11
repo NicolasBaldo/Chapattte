@@ -1,0 +1,168 @@
+<<<<<<< HEAD
+=======
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.home-k8K {
+    color:
+        #58111a;
+    flex-shrink:
+        0;
+    font-family:
+        Times New Romance, 'Source Sans Pro';
+    font-size:
+        3.6rem;
+    font-weight:
+        400;
+    line-height:
+        1.2575;
+    margin:
+        6.6rem 9.571rem 0rem 0rem;
+    text-align:
+        center;
+    white-space:
+        nowrap;
+}
+
+.pictures-hrB {
+    color:
+        #58111a;
+    font-family:
+        Times New Romance, 'Source Sans Pro';
+    font-size:
+        3.6rem;
+    font-weight:
+        400;
+    height:
+        4.6rem;
+    left:
+        4.7091rem;
+    line-height:
+        1.2575;
+    position:
+        absolute;
+    text-align:
+        center;
+    top:
+        6.7rem;
+    white-space:
+        nowrap;
+    width:
+        12.3rem;
+}
+
+.rectangle-50-ZtP {
+    background-color:
+        #ffffff;
+    border:
+        solid 0.2rem #eab4f8;
+    border-radius:
+        2rem;
+    box-sizing:
+        border-box;
+    height:
+        15.2rem;
+    left:
+        0;
+    position:
+        absolute;
+    top:
+        12.6rem;
+    width:
+        21.4095rem;
+}
+
+.ugly-cats-G27 {
+    color:
+        #58111a;
+    font-family:
+        Times New Romance, 'Source Sans Pro';
+    font-size:
+        2rem;
+    font-weight:
+        400;
+    height:
+        2.6rem;
+    left:
+        7.7782rem;
+    line-height:
+        1.2575;
+    position:
+        absolute;
+    text-align:
+        center;
+    top:
+        14.6rem;
+    white-space:
+        nowrap;
+    width:
+        7.5rem;
+}
+
+.fat-cats-MpF {
+    color:
+        #58111a;
+    font-family:
+        Times New Romance, 'Source Sans Pro';
+    font-size:
+        2rem;
+    font-weight:
+        400;
+    height:
+        2.6rem;
+    left:
+        7.7106rem;
+    line-height:
+        1.2575;
+    position:
+        absolute;
+    text-align:
+        center;
+    top:
+        23.1rem;
+    white-space:
+        nowrap;
+    width:
+        6.4rem;
+}
+
+.desguised-cats-fpw {
+    color:
+        #58111a;
+    font-family:
+        Times New Romance, 'Source Sans Pro';
+    font-size:
+        2rem;
+    font-weight:
+        400;
+    height:
+        2.6rem;
+    left:
+        7.3353rem;
+    line-height:
+        1.2575;
+    position:
+        absolute;
+    text-align:
+        center;
+    top:
+        19rem;
+    white-space:
+        nowrap;
+    width:
+        12.4rem;
+}
+>>>>>>> 0523f9d14981805aae1ec5e205a7ceda8d133f7f
