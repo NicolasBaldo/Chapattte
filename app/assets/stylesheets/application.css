@@ -321,3 +321,37 @@ body {
 /* FIN FORMS */
 
 
+
+
+/* FOOTER */
+
+footer {
+  background: #e8b4f447;
+  color: #58111A;
+  margin-top: 100px;
+  
+}
+
+.copy {
+  font-size: 12px;
+  padding: 10px;
+}
+
+.footer-middle {
+  padding-top: 2em;
+  color: #58111A;
+  align-items: flex-start;
+}
+
+.social-links {
+ display: flex;
+ }
+
+.social-link {
+  margin: 0 10px;
+}
+
+.footer-pad {
+  align-items: flex-end; 
+}
+
