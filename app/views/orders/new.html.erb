@@ -200,24 +200,6 @@ h1 {
 </style> 
 
 
-<%= form_tag orders_path do %>
-    <article>
-      <% if flash[:error].present? %>
-        <div id="error_explanation">
-          <p><%= flash[:error] %></p>
-        </div>
-      <% end %>
-      <label class="amount">
-        <span>Amount: $5.00</span>
-      </label>
-    </article>
-    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-        data-description="Achat d'un produit"
-        data-amount="500"
-        data-locale="auto">
-    </script>
-    <% end %>
 
 <h1><center> Cart</center> </h1> 
 
@@ -315,6 +297,23 @@ h1 {
  
     <div class="total-price">$349</div>
   </div>
+  <div class="total-amount">
+  <h2>Total: $1768</h2> <!-- Example total amount, replace with actual total -->
+  <%= form_tag orders_path do %>
+    <% if flash[:error].present? %>
+      <div id="error_explanation">
+        <p><%= flash[:error] %></p>
+      </div>
+    <% end %>
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+        data-description="Total Amount"
+        data-amount="176800"
+        data-locale="auto">
+    </script>
+  <% end %>
+</div>
+</div>
 </div>
 
 
