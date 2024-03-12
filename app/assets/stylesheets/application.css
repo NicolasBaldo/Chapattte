@@ -296,14 +296,15 @@ body {
   background-color: #ff70b759;
   border: solid #FF70B8 2px;
   border-radius: 15px;
-  padding: 2%;
-  width: 20%
+  padding: 5%;
+  width: 40%
 }
 
 .field-form {
   border: solid #FF70B8 2px;
   border-radius: 10px;
   padding: 4%;
+  width: 150%;
 }
 
 .field-form:focus{
