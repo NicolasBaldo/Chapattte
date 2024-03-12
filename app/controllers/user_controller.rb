@@ -1,6 +1,4 @@
 class UserController < ApplicationController
-  #before_action :authenticate_user!
-
   def index
     @users = User.all
   end
@@ -14,27 +12,18 @@ class UserController < ApplicationController
   end
 
   def create
-    @user = User.create(
-      first_name: Faker::Name.first_name,
-      last_name: Faker::Name.last_name,
-      email: "#{first_name}.#{last_name}@yopmail.com"
-    )
+    @user = User.new(user_params)
 
-    respond_to do |format|
-      if @user.save
-        format.html { redirect_to user_url(@user), notice: "User was successfully created." }
-        format.json { render :show, status: :created, location: @user }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
+    if @user.save
+      redirect_to user_path(@user), notice: "Votre compte a été créé avec succès."
+    else
+      render :new
     end
   end
 
-  def edit
-    @user = current_user
-  end
+  private
 
-  def delete
+  def user_params
+    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
   end
 end
