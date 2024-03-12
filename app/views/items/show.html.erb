@@ -1,8 +1,8 @@
 <h1 class="h1_center"> <%= @item.title %> </h1>
 
 <div class="card_show">
-    <%= image_tag @image_url, alt: @item.title %>
-        <div>
+    <%= image_tag @image_url, alt: @item.title, class: "img-show" %>
+        <div class="infos-show">
             <div class="border_show">
                 <p>
                     <%= @item.description %>
@@ -11,10 +11,40 @@
 
             <div class="price_show">
                 <p>
-                   Prix : <%= @item.price %> 
+                   <%= @item.price %> $ 
                 </p>
+            </div> <br>
+
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Choose quantity</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select> <br>
+            
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Choose size</option>
+              <option value="1">A3</option>
+              <option value="2">A4</option>
+              <option value="3">A5</option>
+            </select> <br>
+
+            <div class="truck">
+              <i class="fa-solid fa-truck-fast"></i>
+              <p> Delivery in 1 to 3 working days </p>
             </div>
 
-            <button class="btn_bot"> add to card </button>
+            <div class="box">
+              <i class="fa-solid fa-box"></i>
+              <p> Free delivery from 70$ </p>
+            </div>
+
+            <div class="btn-show">
+              <button class="btn_bot"> Add to card </button>
+              <i class="fa-regular fa-heart"></i>
+              <i class="fa-solid fa-heart"></i>
+            </div>
         </div>
+
+        
 </div>
