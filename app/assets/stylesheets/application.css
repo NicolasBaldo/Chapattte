@@ -231,7 +231,7 @@ body {
   border-radius: 20px;
   width: 100%;
   text-align: center;
-  padding-top: 10px;
+  padding: 5% 5% 0 5%;
 }
 
 .price_show{
@@ -240,11 +240,9 @@ body {
   width: 30%;
   margin-top: 5%;
   text-align: center;
-  border: solid #FF70B8;
-  background-color: #FF70B8;
   border-radius: 40px;
   padding-top: 10px;
-  color: white;
+  color: #58111A;
 }
 
 .btn_bot{
@@ -254,6 +252,7 @@ body {
   border: none;
   padding: 10px;
   text-align: center;
+  text-decoration: none;
 }
 
 .form-select {
@@ -282,12 +281,6 @@ body {
 
 
 /* FORMS */
-.container-form {
-  display: flex;
-  justify-content: center;
-  margin: 10%;
-}
-
 .connexion-form {
   display: flex;
   flex-direction: column;
@@ -297,14 +290,20 @@ body {
   border: solid #FF70B8 2px;
   border-radius: 15px;
   padding: 5%;
-  width: 40%
+  width: 35%;
+  margin: auto;
+  color: #58111A;
+}
+
+.form-log {
+  margin-left: 0;
 }
 
 .field-form {
   border: solid #FF70B8 2px;
   border-radius: 10px;
   padding: 4%;
-  width: 150%;
+  width: 100%;
 }
 
 .field-form:focus{
@@ -319,18 +318,49 @@ body {
   padding: 5% 15% 5% 15%;
   margin: 10px;
 }
+
+.actions-log {
+  display: flex;
+  justify-content: center;
+}
+
+.btn_bot2{
+  background-color: #A9E38C;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn_bot3{
+  background-color: #FF3F0A;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.end-form {
+  display: flex;
+}
+
+.end-edit {
+  display: flex;
+}
 /* FIN FORMS */
 
 
 
 
 /* FOOTER */
-
 footer {
-  background: #e8b4f447;
+  background: #e8b4f400;
   color: #58111A;
   margin-top: 100px;
-  
 }
 
 .copy {
@@ -355,4 +385,5 @@ footer {
 .footer-pad {
   align-items: flex-end; 
 }
+/* FIN FOOTER */
 
