@@ -18,4 +18,4 @@ end
     last_name: last_name,
     email: email,
     password: 'password')
-end
+  end
