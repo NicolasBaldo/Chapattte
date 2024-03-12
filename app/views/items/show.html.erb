@@ -1,0 +1,20 @@
+<h1 class="h1_center"> <%= @item.title %> </h1>
+
+<div class="card_show">
+    <%= image_tag @image_url, alt: @item.title %>
+        <div>
+            <div class="border_show">
+                <p>
+                    <%= @item.description %>
+                </p>
+            </div>
+
+            <div class="price_show">
+                <p>
+                   Prix : <%= @item.price %> 
+                </p>
+            </div>
+
+            <button class="btn_bot"> add to card </button>
+        </div>
+</div>

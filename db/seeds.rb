@@ -8,6 +8,19 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
+# 20.times do
+#   new_item = Item.create(
+#     title: Faker::Creature::Cat.breed, 
+#   description: Faker::ChuckNorris.fact,
+#    price: Faker::Commerce.price,
+#     image_url: Faker::LoremFlickr.image)
+# end
+
 20.times do
-  new_item = Item.create(title: Faker::Creature::Cat.breed, description: Faker::ChuckNorris.fact, price: Faker::Commerce.price, image_url: Faker::LoremFlickr.image)
+  new_item = Item.create(
+    title: Faker::Creature::Cat.breed,
+    description: Faker::ChuckNorris.fact,
+    price: Faker::Commerce.price,
+    image_url: Faker::Placeholdit.image
+  )
 end

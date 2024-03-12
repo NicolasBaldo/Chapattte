@@ -14,152 +14,32 @@
  *= require_self
  */
 
-.home-k8K {
-    color:
-        #58111a;
-    flex-shrink:
-        0;
-    font-family:
-        Times New Romance, 'Source Sans Pro';
-    font-size:
-        3.6rem;
-    font-weight:
-        400;
-    line-height:
-        1.2575;
-    margin:
-        6.6rem 9.571rem 0rem 0rem;
-    text-align:
-        center;
-    white-space:
-        nowrap;
-}
+ /* stylle_css show page*/
 
-.pictures-hrB {
-    color:
-        #58111a;
-    font-family:
-        Times New Romance, 'Source Sans Pro';
-    font-size:
-        3.6rem;
-    font-weight:
-        400;
-    height:
-        4.6rem;
-    left:
-        4.7091rem;
-    line-height:
-        1.2575;
-    position:
-        absolute;
-    text-align:
-        center;
-    top:
-        6.7rem;
-    white-space:
-        nowrap;
-    width:
-        12.3rem;
-}
+.card_show {
+    display: flex;
+    flex-direction: row;
+    max-width: 1000px;
+    align-items: flex-start;
+    margin: auto;
+    gap: 30% ;
+  }
+  
+  .h1_center{
+    text-align: center;
+    margin-bottom: 7%;
+  }
 
-.rectangle-50-ZtP {
-    background-color:
-        #ffffff;
-    border:
-        solid 0.2rem #eab4f8;
-    border-radius:
-        2rem;
-    box-sizing:
-        border-box;
-    height:
-        15.2rem;
-    left:
-        0;
-    position:
-        absolute;
-    top:
-        12.6rem;
-    width:
-        21.4095rem;
-}
+  .border_show{
+    border-radius: 30px;
+    width: 100%;
+    text-align: center;
+  }
 
-.ugly-cats-G27 {
-    color:
-        #58111a;
-    font-family:
-        Times New Romance, 'Source Sans Pro';
-    font-size:
-        2rem;
-    font-weight:
-        400;
-    height:
-        2.6rem;
-    left:
-        7.7782rem;
-    line-height:
-        1.2575;
-    position:
-        absolute;
-    text-align:
-        center;
-    top:
-        14.6rem;
-    white-space:
-        nowrap;
-    width:
-        7.5rem;
-}
+  .price_show{
+    text-align: end;
+  }
 
-.fat-cats-MpF {
-    color:
-        #58111a;
-    font-family:
-        Times New Romance, 'Source Sans Pro';
-    font-size:
-        2rem;
-    font-weight:
-        400;
-    height:
-        2.6rem;
-    left:
-        7.7106rem;
-    line-height:
-        1.2575;
-    position:
-        absolute;
-    text-align:
-        center;
-    top:
-        23.1rem;
-    white-space:
-        nowrap;
-    width:
-        6.4rem;
-}
-
-.desguised-cats-fpw {
-    color:
-        #58111a;
-    font-family:
-        Times New Romance, 'Source Sans Pro';
-    font-size:
-        2rem;
-    font-weight:
-        400;
-    height:
-        2.6rem;
-    left:
-        7.3353rem;
-    line-height:
-        1.2575;
-    position:
-        absolute;
-    text-align:
-        center;
-    top:
-        19rem;
-    white-space:
-        nowrap;
-    width:
-        12.4rem;
-}
+  .btn_bot{
+    background-color: blueviolet;
+  }

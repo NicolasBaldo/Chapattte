@@ -1,16 +1,15 @@
 <!-- app/views/items/index.html.erb -->
 <h1>Liste des articles</h1>
 
-
-
-
 <ul>
   <% @items.each do |item| %>
     <li>
       <h2><%= item.title %></h2>
       <p><%= item.description %></p>
       <p>Prix : <%= item.price %></p>
-      <img src="<%= item.image_url %>" alt="<%= item.title %>">
+      <%= link_to item_path(item, image_url: item.image_url) do %>
+        <img src="<%= item.image_url %>" alt="<%= item.title %>">
+      <% end %>
     </li>
   <% end %>
 </ul>
