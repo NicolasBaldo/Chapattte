@@ -1,7 +1,8 @@
-Rails.application.routes.draw do  
-  devise_for :users
-  root 'items#index'
+Rails.application.routes.draw do
 
+  
+  root 'items#index'
+  resources :orders, only: [:new, :create]
   resources :items
  
 
