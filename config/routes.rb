@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-
-  
   root 'items#index'
-  resources :orders, only: [:new, :create]
+  
   resources :items
   devise_for :users
+
+  resources :join_table_items_carts
+  resources :carts
  
 
 
