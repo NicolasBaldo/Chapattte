@@ -1,11 +1,19 @@
 class User < ApplicationRecord
+
+  
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  belongs_to :cart, optional: true
+  has_one :cart
   has_many :orders
+  
+  after_create :welcome_send
+
+  def welcome_send
+    UserMailer.welcome_email(self).deliver_now
+  end
   def first_name
     self[:first_name]
   end
@@ -13,3 +21,5 @@ class User < ApplicationRecord
     self[:last_name]
   end
 end
+
+
