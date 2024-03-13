@@ -1,8 +1,10 @@
 class StaticPagesController < ApplicationController
     def team
         end
-        def uglycats
+    def uglycats
            end
-        def fatcats
+    def fatcats
+        end
+        def desiguesedcats
         end
 end

@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'team', to: 'static_pages#team'
   get 'uglycats', to: 'static_pages#uglycats'
   get 'fatcats', to:  'static_pages#fatcats'
+  get 'desiguesedcats', to: 'static_pages#desiguesedcats'
   # Décommentez cette ligne si vous avez besoin de définir une route vers la page d'équipe du contrôleur ItemsController
   # get 'team', to: 'items#index' 
 
