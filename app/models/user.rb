@@ -6,4 +6,10 @@ class User < ApplicationRecord
 
   belongs_to :cart, optional: true
   has_many :orders
+  def first_name
+    self[:first_name]
+  end
+  def last_name
+    self[:last_name]
+  end
 end
