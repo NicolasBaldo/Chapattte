@@ -64,7 +64,12 @@
               <li>
                 <%= link_to "Log out", destroy_user_session_path, method: :delete, data: {turbo_method: :delete} %>
               </li>
-      
+              <li> 
+              <%= link_to "My Profile", user_path(current_user) %>
+
+
+
+              </li>
             
       
               <li>
@@ -85,6 +90,7 @@
               <li>
                 <%= link_to "Sign up", new_user_registration_path %>
               </li>
+             
             </ul>
           </div>
       <% end %>
