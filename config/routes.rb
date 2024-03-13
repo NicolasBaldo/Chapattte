@@ -8,6 +8,12 @@ Rails.application.routes.draw do
   resources :carts
   resources :users
 
+  # Route vers la page d'équipe (assumant que vous avez un contrôleur StaticPagesController)
+  get 'team', to: 'static_pages#team'
+  get 'uglycats', to: 'static_pages#uglycats'
+  get 'fatcats', to:  'static_pages#fatcats'
+  # Décommentez cette ligne si vous avez besoin de définir une route vers la page d'équipe du contrôleur ItemsController
+  # get 'team', to: 'items#index' 
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
