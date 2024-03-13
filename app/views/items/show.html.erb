@@ -45,7 +45,7 @@
 
             <div class="btn-show">
               <% if user_signed_in? %>
-                <%= link_to "Add to cart", new_order_path, class: "btn_bot" %>
+                <%= button_to "Add to cart", join_table_items_carts_path, method: :post, params: { item: @item }, class: "btn_bot" %>
               <% else %>
                 <%= link_to "Login to add", new_user_session_path, class: "btn_bot" %>
               <% end %>

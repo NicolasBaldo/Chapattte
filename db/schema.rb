@@ -34,6 +34,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_13_134421) do
     t.bigint "item_id", null: false
     t.bigint "cart_id", null: false
     t.integer "quantity"
+    t.decimal "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["cart_id"], name: "index_join_table_items_carts_on_cart_id"

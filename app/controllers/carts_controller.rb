@@ -4,6 +4,8 @@ class CartsController < ApplicationController
   end
 
   def show
+
+    
   end
 
   def create
