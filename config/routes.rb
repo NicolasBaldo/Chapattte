@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :join_table_items_carts
   resources :carts
- 
+  resources :users, only: [:show]
 
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

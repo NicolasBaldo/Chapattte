@@ -1,6 +1,5 @@
 class UserMailer < ApplicationMailer
-
-    default from: ENV['MAILJET_DEFAULT_FROM'] #changement de mail
+    default from: ENV['MAILJET.DEFAULT_FROM']
 
     def welcome_email(user)
       #on récupère l'instance user pour ensuite pouvoir la passer à la view en @user
