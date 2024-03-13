@@ -5,8 +5,8 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :join_table_items_carts
   resources :carts
+  resources :orders
   resources :users
 
 
