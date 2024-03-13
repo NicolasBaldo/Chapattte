@@ -2,11 +2,12 @@ Rails.application.routes.draw do
   root 'items#index'
   
   resources :items
+
   devise_for :users
 
   resources :join_table_items_carts
   resources :carts
-  resources :users, only: [:show]
+  resources :users
 
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
