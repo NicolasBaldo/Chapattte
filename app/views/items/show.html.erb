@@ -40,10 +40,14 @@
             </div>
 
             <div class="btn-show">
-            <%= link_to "Add to cart", new_order_path, class: "btn_bot" %>
-            <i class="fa-regular fa-heart"></i>
-            <i class="fa-solid fa-heart"></i>
-          </div>
+              <% if user_signed_in? %>
+                <%= link_to "Add to cart", new_order_path, class: "btn_bot" %>
+              <% else %>
+                <%= link_to "Login to add", new_user_session_path, class: "btn_bot" %>
+              <% end %>
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-heart"></i>
+            </div>
 </div>          
           
 

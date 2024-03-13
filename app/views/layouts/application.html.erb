@@ -54,37 +54,42 @@
         </div>
 
 
-        <button class="btn btn-outline-dark btn-lg btn-pink">
-          Login
-        </button>
-
-
-        <ul>
-  <% if user_signed_in? %>
-    <li>
-    <%= link_to "Sign out", destroy_user_session_path, method: :delete, data: {turbo_method: :delete} %>
-    </li>
-
-    <li>
-      Voici ton email : <%= current_user.email %>
-    </li>
-
-    <li>
-      <%= link_to "Edit email / password", edit_user_registration_path %>
-    </li>
-
-  <% else %>
-    <li>    
-      <%= link_to "Sign in", new_user_session_path %>
-    </li>
-
-    <li>
-      <%= link_to "Sign up", new_user_registration_path %>
-    </li>
-
-  <% end %>
-</ul>
-
+        
+        <% if user_signed_in? %>
+          <div class="btn-group">
+            <button class="btn btn-outline-dark btn-lg btn-pink dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              My profile
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <%= link_to "Log out", destroy_user_session_path, method: :delete, data: {turbo_method: :delete} %>
+              </li>
+      
+            
+      
+              <li>
+                <%= link_to "Edit email / password", edit_user_registration_path %>
+              </li>
+            </ul>
+          </div>
+        <% else %>
+          <div class="btn-group">
+            <button class="btn btn-outline-dark btn-lg btn-pink dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Login
+            </button>
+            <ul class="dropdown-menu">
+              <li>    
+                <%= link_to "Log in", new_user_session_path %>
+              </li>
+      
+              <li>
+                <%= link_to "Sign up", new_user_registration_path %>
+              </li>
+            </ul>
+          </div>
+      <% end %>
+        
+          
       
     </div>
   </nav>
