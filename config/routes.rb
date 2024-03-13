@@ -1,9 +1,12 @@
-Rails.application.routes.draw do  
-  root 'items#index'
+Rails.application.routes.draw do
 
+  
+  root 'items#index'
+  resources :orders, only: [:new, :create]
   resources :items
-  resources :user
   devise_for :users
+ 
+
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
