@@ -2,6 +2,7 @@ require_relative "boot"
 
 require "rails/all"
 
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
@@ -23,5 +24,9 @@ module Chapattte
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.stripe = {
+  publishable_key: 'PUBLISHABLE_KEY',
+  secret_key: 'SECRET_KEY'
+}
   end
 end
