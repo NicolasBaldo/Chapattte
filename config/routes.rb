@@ -18,7 +18,14 @@ Rails.application.routes.draw do
   end
   
   resources :cart_items
-  resources :static_pages
+  
+  get 'team', to: 'static_pages#team'
+  get 'uglycats', to: 'static_pages#uglycats'
+  get 'fatcats', to:  'static_pages#fatcats'
+  get 'desiguesedcats', to: 'static_pages#desiguesedcats'
+  get 'contact', to: 'static_pages#contact'
+  get 'help', to: 'static_pages#help'
+  get 'privacypolicy', to: 'static_pages#privacypolicy'
 
 
   get "up" => "rails/health#show", as: :rails_health_check
