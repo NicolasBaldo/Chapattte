@@ -54,7 +54,7 @@
            <%= link_to ('<i class="fa-solid fa-bag-shopping"></i>').html_safe, cart_path(Cart.find_by(user: current_user).id.to_i)  %>
         </div>
           <% else %>
-
+          <%= link_to ('<i class="fa-solid fa-bag-shopping"></i>').html_safe, new_user_session_path %>
           <% end %>
 
 
