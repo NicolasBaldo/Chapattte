@@ -1,3 +1,36 @@
+<style>
+.card-index {
+  background-color: #ff70b759;
+  border: solid #FF70B8 2px!important;
+  border-radius: 15px;
+
+}
+
+.card-index h4  { 
+  color: #58111A;
+}
+
+.card-index p  { 
+  color: #58111A;
+}
+
+.card-img-top {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.card-img-top {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+</style>
+
+
 <main class="container">
   <div class="row row-cols-4 row-cols-md-3 col-sm-12 p-md-0 m-md-0 d-flex justify-content-center">
 
@@ -13,7 +46,7 @@
             <p class="card-text"><%= item.price %> $</p>
           </div>
           <div class="card-footer">
-            <%= link_to "See more", admin_item_path(item.id), class:"btn btn-outline-dark mx-1 my-1" %>
+            <%= link_to "See more", admin_item_path(item.id), class:"btn" %>
           </div>
         </div>
       </a>
