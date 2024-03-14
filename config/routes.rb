@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   resources :carts
   resources :users
+  resources :orders
+  
 
   get 'team', to: 'static_pages#team'
   get 'uglycats', to: 'static_pages#uglycats'
