@@ -4,6 +4,9 @@ class CartsController < ApplicationController
   end
 
   def show
+ @all_cart_items = CartItem.where(cart: current_user.cart)
+
+  @cart = current_user.cart
   end
 
   def create

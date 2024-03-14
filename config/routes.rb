@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :carts
   resources :users
   resources :orders
-  
+  resources :cart_items, only: [:create, :destroy]
 
   get 'team', to: 'static_pages#team'
   get 'uglycats', to: 'static_pages#uglycats'
