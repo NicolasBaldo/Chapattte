@@ -21,7 +21,7 @@ class UserMailer < ApplicationMailer
   
       @url  = 'http://monsite.fr/login'
   
-      mail(to: @user.email, subject: 'Your Chatpatte's order !')
+      mail(to: @user.email, subject: "Your Chatpatte's order !")
     end
 
 end
