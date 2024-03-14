@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   root 'items#index'
   
   resources :items
+
   devise_for :users
 
-  resources :join_table_items_carts
   resources :carts
   resources :users
 
