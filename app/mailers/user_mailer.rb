@@ -9,7 +9,19 @@ class UserMailer < ApplicationMailer
       @url  = 'http://monsite.fr/login' 
   
       # c'est cet appel à mail() qui permet d'envoyer l’e-mail en définissant destinataire et sujet.
-      mail(to: @user.email, subject: 'Bienvenue chez nous !') 
+      mail(to: @user.email, subject: 'Welcome !') 
+    end
+
+    def order_email(order)
+      @order = order
+  
+      @cart = @order.user.cart
+  
+      @user = User.find(order.user_id)
+  
+      @url  = 'http://monsite.fr/login'
+  
+      mail(to: @user.email, subject: 'Your Chatpatte's order !')
     end
 
 end
