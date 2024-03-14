@@ -11,9 +11,11 @@
     <div class="cart-item-summary col-2">
       <p>Prix: <%= cart_item.item.price %> € </p>
       <p>Quantity: 1</p>
-  
-      iCI bTN dELET
+
+     <%= button_to "Delete", cart_item_path(cart_item), method: :delete, class: "btn_bot" %>
+
      
+
     </div>
   <% end %>
 <% else %>
