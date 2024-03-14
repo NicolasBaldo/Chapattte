@@ -50,15 +50,13 @@
         </div>
 
         <% if user_signed_in? %>
-        <div class="basket-container">
-           <%= link_to ('<i class="fa-solid fa-bag-shopping"></i>').html_safe, cart_path(Cart.find_by(user: current_user).id.to_i)  %>
-        </div>
-          <% else %>
+          <div class="basket-container">
+              <%= link_to "<i class='fa-solid fa-bag-shopping'></i> #{current_user.cart.items.count}".html_safe, cart_path(current_user.id), class:"nav-link btn"%>
+          </div>
+        <% else %>
           <%= link_to ('<i class="fa-solid fa-bag-shopping"></i>').html_safe, new_user_session_path %>
-          <% end %>
+        <% end %>
 
-
-        
         <% if user_signed_in? %>
           <div class="btn-group">
             <button class="btn btn-outline-dark btn-lg btn-pink dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
