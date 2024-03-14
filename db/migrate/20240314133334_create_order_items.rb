@@ -1,6 +1,6 @@
-class CreateJoinTableOrderItems < ActiveRecord::Migration[7.1]
+class CreateOrderItems < ActiveRecord::Migration[7.1]
   def change
-    create_table :join_table_order_items do |t|
+    create_table :order_items do |t|
       t.belongs_to :item, index: true
       t.belongs_to :order, index: true
       t.timestamps

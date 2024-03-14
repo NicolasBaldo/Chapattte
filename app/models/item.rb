@@ -5,9 +5,11 @@ class Item < ApplicationRecord
     validates :image_url, presence: true
 
     
+    has_many :cart_items, dependent: :destroy
+    has_many :carts, through: :cart_items
 
-    has_many :join_table_order_items
-    has_many :orders, through: :join_table_order_items
+    has_many :order_items
+    has_many :orders, through: :order_items
 
 end
 
