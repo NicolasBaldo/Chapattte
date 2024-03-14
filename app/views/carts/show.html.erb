@@ -50,3 +50,5 @@
 
 <h3>Total: <%= @all_cart_items.sum(&:price) %>$</h3>
 
+<%= button_to "Pay", checkout_create_path(total: @all_cart_items.sum(&:price)), class: "btn btn-primary", data: {turbo: false} %>
+

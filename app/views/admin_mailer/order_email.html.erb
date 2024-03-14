@@ -9,7 +9,7 @@
     <h2>Here the order : </h2>
 
     <p><%= @user.email %> ordered <%= @cart.items.length %> item(s) !</p> 
-    <p>For an amount of <%= @cart.total %> $</p> 
+    <p>For an amount of <%= @cart.items.all.sum(&:price) %> </p>
 
     <p>
       To access dashboard, connect here : <a href="<%= @url %>"><%= @url %></a> .

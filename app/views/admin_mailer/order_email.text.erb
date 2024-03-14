@@ -8,7 +8,7 @@ Here the order :
 <% end %>
 
 <%= @user.email %> ordered <%= @cart.items.length %> item(s) !
-For an amount of <%= @cart.total %> $
+For an amount of <%= @cart.items.all.sum(&:price) %> $
 
 To access dashboard, connect here : <%= @url %>
 
