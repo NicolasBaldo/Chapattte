@@ -3,11 +3,11 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  
-  has_one :cart
+
+  has_one :cart, dependent: :destroy
   has_many :orders
   
-  after_create :welcome_send
+  after_create :welcome_send, :create_cart
 
   def welcome_send
     UserMailer.welcome_email(self).deliver_now
@@ -17,6 +17,10 @@ class User < ApplicationRecord
   end
   def last_name
     self[:last_name]
+  end
+
+  def create_cart
+    Cart.create(user: self)
   end
 end
 

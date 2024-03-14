@@ -1,2 +1,20 @@
-<h1>Carts#show</h1>
-<p>Find me in app/views/carts/show.html.erb</p>
+<% if @all_cart_items.present? %>
+  <% @all_cart_items.each do |cart_item| %>
+
+    <%= image_tag cart_item.item.image_url, alt: cart_item.item.title %>
+
+    </div>
+    <div class="cart-item-text col-8">
+      <h4> <%= cart_item.item.title %></h4>
+      <p> <%= cart_item.item.description %></p> 
+    </div>
+    <div class="cart-item-summary col-2">
+      <p>Prix: <%= cart_item.item.price %> € </p>
+      <p>Quantity: 1</p>
+
+    </div>
+  <% end %>
+<% else %>
+  <p>Votre panier est vide.</p>
+<% end %>
+  

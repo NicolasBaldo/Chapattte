@@ -16,7 +16,7 @@ Rails.application.routes.draw do
     resources :orders
     resources :items
   end
-  
+  resources :cart_items, only: [:create, :destroy]
 
   get 'team', to: 'static_pages#team'
   get 'uglycats', to: 'static_pages#uglycats'
