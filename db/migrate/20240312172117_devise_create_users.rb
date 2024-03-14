@@ -3,7 +3,6 @@
 class DeviseCreateUsers < ActiveRecord::Migration[7.1]
   def change
     create_table :users do |t|
-      t.belongs_to :cart, index: true
       t.string :first_name
       t.string :last_name
       ## Database authenticatable
