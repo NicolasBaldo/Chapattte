@@ -32,7 +32,7 @@ class CheckoutController < ApplicationController
     @payment_intent = Stripe::PaymentIntent.retrieve(@session.payment_intent)
 
     order = Order.new(user: current_user)
-    puts order
+    
     if order.save
       all_cart_items = CartItem.where(cart: current_user.cart)
       all_cart_items.each do |cart_item|
