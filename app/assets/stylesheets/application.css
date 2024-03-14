@@ -172,7 +172,6 @@ body {
   border: solid #FF70B8;
   border-radius: 10px;
 }
-<<<<<<< HEAD
 
 .col-index {
   display: flex;
@@ -191,26 +190,6 @@ body {
   margin-top: 2%;
 }
 
-=======
-
-.col-index {
-  display: flex;
-  color: #58111A;
-}
-
-.img-circle {
-  border-radius: 50%;
-  height: 100%;
-  width: 50%;
-  padding-bottom: 5%;
-  padding-top: 5%;
-}
-
-.sm-index {
-  margin-top: 2%;
-}
-
->>>>>>> devlopment
 .star-index {
   margin-top: 3%;
   color: #EAB4F8;
