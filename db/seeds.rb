@@ -18,3 +18,11 @@ end
     password: "password")
   end
 
+  # Admin
+User.create(
+  first_name: "Admin",
+  last_name: "Hero",
+  email: "admin@yopmail.com",
+  password: "123456",
+  is_admin: true)
+
