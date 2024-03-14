@@ -1,20 +1,39 @@
 <% if @all_cart_items.present? %>
-  <% @all_cart_items.each do |cart_item| %>
-
-    <%= image_tag cart_item.item.image_url, alt: cart_item.item.title %>
-
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card my-3">
+          <div class="card-body">
+            <% @all_cart_items.each do |cart_item| %>
+              <div class="row align-items-center">
+                <div class="col-2">
+                  <%= image_tag cart_item.item.image_url, alt: cart_item.item.title, class: "img-fluid" %>
+                </div>
+                <div class="col-5">
+                  <h4><%= cart_item.item.title %></h4>
+                  <p><%= cart_item.item.description %></p> 
+                </div>
+                <div class="col-2">
+                  <p>Prix: <%= cart_item.item.price %> € </p>
+                  <p>Quantité: 1</p>
+                </div>
+                <div class="col-3">
+                  <button type="button" class="btn btn-danger btn-sm">Supprimer</button>
+                </div>
+              </div>
+              <hr class="my-2"> 
+            <% end %>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="cart-item-text col-8">
-      <h4> <%= cart_item.item.title %></h4>
-      <p> <%= cart_item.item.description %></p> 
-    </div>
-    <div class="cart-item-summary col-2">
-      <p>Prix: <%= cart_item.item.price %> € </p>
-      <p>Quantity: 1</p>
-
-    </div>
-  <% end %>
+  </div>
 <% else %>
-  <p>Votre panier est vide.</p>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <p>Votre panier est vide.</p>
+      </div>
+    </div>
+  </div>
 <% end %>
-  
