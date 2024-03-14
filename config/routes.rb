@@ -2,19 +2,23 @@ Rails.application.routes.draw do
   root 'items#index'
   
   resources :items
+
   devise_for :users
 
-  resources :join_table_items_carts
   resources :carts
-  resources :users, only: [:show]
+  resources :users
+  resources :orders
+  
 
+  get 'team', to: 'static_pages#team'
+  get 'uglycats', to: 'static_pages#uglycats'
+  get 'fatcats', to:  'static_pages#fatcats'
+  get 'desiguesedcats', to: 'static_pages#desiguesedcats'
+  get 'contact', to: 'static_pages#contact'
+  get 'help', to: 'static_pages#help'
+  get 'privacypolicy', to: 'static_pages#privacypolicy'
 
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
 
-  # Defines the root path route ("/")
-  # root "posts#index"
+
 end

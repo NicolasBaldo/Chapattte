@@ -29,16 +29,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="<%= items_path %>">Home</a>
+                    <a class="nav-link active" aria-current="page" href="<%= root_path %>">Home</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Pictures
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Ugly Cats</a></li>
-                        <li><a class="dropdown-item" href="#">Desiguised Cats</a></li>
-                       <li><a class="dropdown-item" href="#">Fat Cats</a></li>
+                        <li><a class="dropdown-item" href="/uglycats">Ugly Cats</a></li>
+                        <li><a class="dropdown-item" href="/desiguesedcats">Desiguised Cats</a></li>
+                       <li><a class="dropdown-item" href="/fatcats">Fat Cats</a></li>
                     </ul>
                 </li>
             </ul>
@@ -113,13 +113,13 @@
     <div class="container">
       <div class="row text-center"> 
         <div class="col-md-2 col-sm-6">
-          <div class="footer-pad">
-            <h4>Company</h4>
-          </div>
+        <div class="footer-pad">
+        <h4><a class="foot-link" href="/team">Company</a></h4>
+      </div>
         </div>
         <div class="col-md-3 col-sm-6">
           <div class="footer-pad">
-            <h4>Contact</h4>
+          <h4><a class="foot-link" href="/contact">Contact</a></h4>
           </div>
         </div>
         <div class="col-md-3">
@@ -138,12 +138,12 @@
        
         <div class="col-md-2 col-sm-6"> 
           <div class="footer-pad">
-            <h4>Help</h4>
+          <h4><a class="foot-link" href="/help">Help</a></h4>
           </div>
         </div>
         <div class="col-md-2 col-sm-6"> 
           <div class="footer-pad">
-            <h4>Privacy Policy</h4>
+          <h4><a class="foot-link" href="/privacypolicy">Privacy Policy</a></h4>
           </div>
         </div>
       </div>

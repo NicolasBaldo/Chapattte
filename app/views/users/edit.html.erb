@@ -1,0 +1,39 @@
+<style> 
+.btnn-warning {
+  background-color: #EAB4F8;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.btnn-outline-warning {
+    background-color: #EAB4F8;
+    color: #fff;
+    padding: 10px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+</style>
+
+
+<main class="containner">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <center><h1>Editer votre profil</h1></center>
+             <br>
+             <br>
+
+            <%= render 'form', user: @user %>
+            <br>
+            <br>
+
+            <div class="text-center">
+                <%= link_to 'Voir le profil', user_path , class:"btnn btnn-warning" %> 
+                <%= link_to '« Retour Accueil', root_path, class:"btnn btnn-outline-warning" %>
+            </div>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</main>
