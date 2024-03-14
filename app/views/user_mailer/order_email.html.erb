@@ -9,11 +9,13 @@
     You bought items on <strong>Chatpatte</strong> by using this email : <%= @user.email %>.
     </p>
 
-    <h2>Here the items :</h2>
+    <h2>Here are the items :</h2>
 
-    <% @cart.items.each do |item| %>
-      <img src="<%= item.image_url %>" alt="" style="height: 300px">
+    <% @user.cart.cart_items.each do |cart_item| %>
+      <img src="<%= cart_item.item.image_url %>" alt="" style="height: 300px">
     <% end %>
+
+    
 
     <p>
       To access your client space, connect here : <a href="<%= @url %>"><%= @url %></a> .

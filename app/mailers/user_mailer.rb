@@ -1,5 +1,5 @@
 class UserMailer < ApplicationMailer
-    default from: ENV['MAILJET.DEFAULT_FROM']
+    default from: ENV['MAILJET_DEFAULT_FROM']
 
     def welcome_email(user)
       #on récupère l'instance user pour ensuite pouvoir la passer à la view en @user
@@ -21,7 +21,7 @@ class UserMailer < ApplicationMailer
   
       @url  = 'http://monsite.fr/login'
   
-      mail(to: @user.email, subject: 'Your Chatpatte's order !')
+      mail(to: @user.email, subject: "Your Chatpatte's order !")
     end
 
 end
