@@ -393,7 +393,9 @@ footer {
 
 /* FIN FOOTER */
 
-
+.container-qty {
+  display: flex;
+}
 
 
 

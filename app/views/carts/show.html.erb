@@ -7,9 +7,21 @@
       <h4> <%= cart_item.item.title %></h4>
       <p> <%= cart_item.item.description %></p> 
     </div>
+
     <div class="cart-item-summary col-2">
-      <p>Prix: <%= cart_item.item.price %> $ </p>
-      <p>Quantity: 1</p>
+      <p>Price : <%= cart_item.item.price %> $ </p>
+
+   
+      <div class="container-qty">
+        <p class="qty"> Quantity </p> <br>
+        <input type="button" onclick="decrementValue()" value="-" />
+        <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="number" />
+        <input type="button" onclick="incrementValue()" value="+" />
+      </div>
+
+ 
+
+
 
      <%= button_to "Delete", cart_item_path(cart_item), method: :delete, class: "btn_bot" %>
 
@@ -21,3 +33,4 @@
 <% end %>
 
 <h3>Total: <%= @all_cart_items.sum(&:price) %>$</h3>
+
