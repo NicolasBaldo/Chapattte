@@ -405,9 +405,13 @@ footer {
   margin: 0 10px;
 }
 
-.footer-pad {
+.footer-pad h4 a {
   align-items: flex-end; 
-}
+  color: #58111A !important;
+  text-decoration: none !important;
+  }
+
+
 /* FIN FOOTER */
 
 
