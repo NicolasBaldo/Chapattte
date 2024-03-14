@@ -30,8 +30,13 @@
             <br>
 
             <div class="text-center">
-                <%= link_to 'Voir le profil', user_path , class:"btnn btnn-warning" %> 
-                <%= link_to '« Retour Accueil', root_path, class:"btnn btnn-outline-warning" %>
+                <%= link_to 'See profile', user_path , class:"btnn btnn-warning" %>
+
+                <% if current_user.is_admin %>
+                  <%= link_to '« My Items', admin_items_path, class:"btnn btnn-outline-warning" %>
+                <% else %>
+                  <%= link_to '« Home', root_path, class:"btnn btnn-outline-warning" %>
+                <% end %>
             </div>
         </div>
         <div class="col-3"></div>
