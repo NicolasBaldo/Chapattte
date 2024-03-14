@@ -173,6 +173,7 @@ body {
   border-radius: 10px;
 }
 
+
 .col-index {
   display: flex;
   color: #58111A;
@@ -189,6 +190,8 @@ body {
 .sm-index {
   margin-top: 2%;
 }
+
+
 
 .star-index {
   margin-top: 3%;

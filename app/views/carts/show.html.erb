@@ -1,36 +1,52 @@
+<style> 
+.btn_red {
+    color: red;
+}
+
+</style>
 <% if @all_cart_items.present? %>
-  <% @all_cart_items.each do |cart_item| %>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card my-3">
+          <div class="card-body">
+            <% @all_cart_items.each do |cart_item| %>
+              <div class="row align-items-center">
+                <div class="col-2">
+                  <%= image_tag cart_item.item.image_url, alt: cart_item.item.title, class: "img-fluid" %>
+                </div>
+                <div class="col-5">
+                  <h4><%= cart_item.item.title %></h4>
+                  <p><%= cart_item.item.description %></p> 
+                </div>
+                <div class="col-2">
+                  <p>Prix: <%= cart_item.item.price %> € </p>
+                  <p>Quantité: 1</p>
+                </div>
+                <div class="col-3">
+                
+                  <%= button_to "Delete", cart_item_path(cart_item), method: :delete, class: "btn_bot btn_red" %>
 
-    <%= image_tag cart_item.item.image_url, alt: cart_item.item.title %>
-
-    <div class="cart-item-text col-8">
-      <h4> <%= cart_item.item.title %></h4>
-      <p> <%= cart_item.item.description %></p> 
-    </div>
-
-    <div class="cart-item-summary col-2">
-      <p>Price : <%= cart_item.item.price %> $ </p>
-
-   
-      <div class="container-qty">
-        <p class="qty"> Quantity </p> <br>
-        <input type="button" onclick="decrementValue()" value="-" />
-        <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="number" />
-        <input type="button" onclick="incrementValue()" value="+" />
+                </div>
+              </div>
+              <hr class="my-2"> 
+            <% end %>
+          </div>
+        </div>
       </div>
-
- 
-
-
-
-     <%= button_to "Delete", cart_item_path(cart_item), method: :delete, class: "btn_bot" %>
-
-   
     </div>
-  <% end %>
+  </div>
 <% else %>
-  <p>Votre panier est vide.</p>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <p>Votre panier est vide.</p>
+      </div>
+    </div>
+  </div>
 <% end %>
+
+
 
 <h3>Total: <%= @all_cart_items.sum(&:price) %>$</h3>
 
