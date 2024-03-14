@@ -1,9 +1,7 @@
 
 <h1>Your profile</h1>
 
-
-
-<p><strong>Email:</strong> <%= @user.email %></p>
+<p> <strong> Email:</strong> <%= @user.email %> </p>
 
 <% if current_user.is_admin %>
   <%= link_to 'My items', admin_items_path, class:"btn btn-outline-warning" %>
@@ -11,10 +9,7 @@
 
 <%= link_to 'Edit profile', edit_user_path, class:"btn btn-outline-warning" %>
 
-<br>
-<br>
-
-
+<br> <br>
 
 <div class="card my-3 text-center card-center">
   <h2 class="action-banner card-header">Dashboard</h2>
@@ -60,7 +55,7 @@
     <% User.all.each do |user| %>
       <div class="card m-1">
         <div class="card-body">
-          <p class="card-text">Mail : <%= user.email %> créé le <%= user.created_at.strftime("%d.%m.%Y à %H:%M") %></p>
+          <p class="card-text">Mail : <%= user.email %> created <%= user.created_at.strftime("%d.%m.%Y à %H:%M") %></p>
           <p class="card-text"><small class="text-muted">Number of orders : <%= user.orders.length %></small></p>
           <p class="card-text"><small class="text-muted">Total spent : <span class="text-danger"><%= user.orders.total_commande %> $</span></small></span>
         </div>

@@ -21,7 +21,7 @@ class Admin::ItemsController < ApplicationController
   def create
     @item = Item.new(title: params[:title], description: params[:description], price: params[:price], image_url: params[:image_url])
     if @item.save
-      redirect_to root_path_path
+      redirect_to root_path
     else
       render :new
     end

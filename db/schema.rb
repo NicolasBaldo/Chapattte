@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_14_111651) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_14_133334) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -30,6 +30,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_14_111651) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "join_table_order_items", force: :cascade do |t|
+    t.bigint "item_id"
+    t.bigint "order_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_join_table_order_items_on_item_id"
+    t.index ["order_id"], name: "index_join_table_order_items_on_order_id"
+  end
+
   create_table "orders", force: :cascade do |t|
     t.string "stripe_customer_id"
     t.bigint "user_id"
@@ -39,7 +48,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_14_111651) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.bigint "cart_id"
     t.string "first_name"
     t.string "last_name"
     t.string "email", default: "", null: false
@@ -50,7 +58,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_14_111651) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "is_admin", default: false
-    t.index ["cart_id"], name: "index_users_on_cart_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

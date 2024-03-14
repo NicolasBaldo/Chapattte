@@ -9,11 +9,7 @@
       <li class="list-group-item"><strong>Prix : </strong><%= @item.price %> €</li>
     </ul>
   </div>
-  <div class="text-left">
-    <%= form_with method: "PUT", url: cart_path  do |form| %>
-    <%= form.submit "Ajouter au panier".html_safe, class:"btn btn-success mt-3"%>
-    <% end %>
-  </div>
+
   <div class=" d-flex justify-content-left">
     <%= link_to "Modify", edit_admin_item_path(@item.id), class:"btn btn-secondary button_center mr-2 mt-3" %>
     <%= form_with(model: [:admin, @item], local: true, url: admin_item_path, method: "delete")  do |form| %>
