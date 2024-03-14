@@ -3,22 +3,21 @@
 
     <%= image_tag cart_item.item.image_url, alt: cart_item.item.title %>
 
-    </div>
     <div class="cart-item-text col-8">
       <h4> <%= cart_item.item.title %></h4>
       <p> <%= cart_item.item.description %></p> 
     </div>
     <div class="cart-item-summary col-2">
-      <p>Prix: <%= cart_item.item.price %> € </p>
+      <p>Prix: <%= cart_item.item.price %> $ </p>
       <p>Quantity: 1</p>
 
      <%= button_to "Delete", cart_item_path(cart_item), method: :delete, class: "btn_bot" %>
 
-     
-
+   
     </div>
   <% end %>
 <% else %>
   <p>Votre panier est vide.</p>
 <% end %>
-  
+
+<h3>Total: <%= @all_cart_items.sum(&:price) %>$</h3>
