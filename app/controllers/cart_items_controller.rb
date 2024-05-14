@@ -15,7 +15,7 @@ class CartItemsController < ApplicationController
     
   def update
   end
-    
+      
   def destroy
     cart_item = CartItem.find(params[:id])
     cart_item.destroy
